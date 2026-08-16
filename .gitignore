@@ -7,10 +7,15 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
-*.local
+# Dependencies & Build Artifacts
+**/node_modules
+**/dist
+**/dist-ssr
+**/.vite
+**/__pycache__
+**/*.pyc
+**/*.local
+**/coverage
 
 # Editor directories and files
 .vscode/*
@@ -24,5 +29,5 @@ dist-ssr
 *.sw?
 
 # Environment Variables
-.env
-.env.production
+**/.env
+**/.env.production
