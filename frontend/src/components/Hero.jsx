@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight, Sparkles, Terminal, Activity, ShieldCheck } from 'lucide-react';
+import ParticleText from './ParticleText';
 
 export default function Hero() {
   return (
@@ -48,6 +49,24 @@ export default function Hero() {
 
         {/* 3. HERO CONTENT & TYPOGRAPHY */}
         
+        {/* Large Interactive Particle Name from PDF */}
+        <div className="w-full flex items-center justify-center my-4 sm:my-6">
+          <div className="w-full max-w-[550px] sm:max-w-[750px] md:max-w-[920px] h-[90px] sm:h-[125px] md:h-[155px] relative cursor-pointer group">
+            <ParticleText
+              text="KLYRO"
+              fontSize={140}
+              particleSize={8}
+              particleCount={50}
+              mouseRadius={85}
+              mouseForce={32}
+              colors={['#FFFFFF', '#22d3ee', '#38bdf8', '#818cf8', '#6366f1']}
+              mode="onEnter"
+              autoFit={true}
+              style={{ width: '100%', height: '100%' }}
+            />
+          </div>
+        </div>
+
         {/* Eyebrow */}
         <div className="mb-4 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#22d3ee]/5 border border-[#22d3ee]/20">
           <span className="w-1.5 h-1.5 rounded-full bg-[#22d3ee]" />
