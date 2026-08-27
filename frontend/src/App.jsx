@@ -16,6 +16,7 @@ import HowItWorksPage from './pages/HowItWorksPage';
 import BattleResultsPage from './pages/BattleResultsPage';
 import ShowcasePage from './pages/ShowcasePage';
 import ProfilePage from './pages/ProfilePage';
+import LoginPage from './pages/LoginPage';
 
 // Scroll to top helper on route navigation
 function ScrollToTop() {
@@ -72,6 +73,7 @@ export default function App() {
               <Route path="/results" element={<BattleResultsPage />} />
               <Route path="/showcase" element={<ShowcasePage />} />
               <Route path="/profile" element={<ProfilePage />} />
+              <Route path="/login" element={<LoginPage />} />
               {/* Fallback route */}
               <Route path="*" element={<HomePage />} />
             </Routes>

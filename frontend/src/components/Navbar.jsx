@@ -127,12 +127,12 @@ export default function Navbar() {
               )}
             </div>
           ) : (
-            <button
-              onClick={() => openAuthModal('login')}
+            <Link
+              to="/login"
               className="text-xs font-jakarta font-bold uppercase tracking-wider px-4 py-2 rounded-full border border-white/15 bg-white/[0.03] text-white hover:border-[#22d3ee]/60 hover:text-[#22d3ee] hover:bg-[#22d3ee]/10 transition-all duration-200"
             >
               LOGIN
-            </button>
+            </Link>
           )}
 
           <Link
@@ -181,15 +181,14 @@ export default function Navbar() {
                 <User size={18} />
               </Link>
             ) : (
-              <button
-                onClick={() => {
-                  setMobileMenuOpen(false);
-                  openAuthModal('login');
-                }}
-                className="text-xl font-sans font-semibold text-left tracking-wider text-white/80 py-2 border-b border-white/5"
+              <Link
+                to="/login"
+                onClick={() => setMobileMenuOpen(false)}
+                className="text-xl font-sans font-semibold text-left tracking-wider text-white/80 hover:text-[#22d3ee] py-2 border-b border-white/5 flex items-center justify-between"
               >
-                LOGIN / REGISTER
-              </button>
+                <span>LOGIN / REGISTER</span>
+                <ArrowRight size={18} className="text-[#22d3ee]" />
+              </Link>
             )}
           </div>
 
