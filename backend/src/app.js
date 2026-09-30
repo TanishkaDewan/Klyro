@@ -3,6 +3,9 @@ const cors = require('cors');
 const profileRoutes = require('./routes/profile.routes');
 const matchmakingRoutes = require('./routes/matchmaking.routes');
 const teamRoutes = require('./routes/team.routes');
+const challengeRoutes = require('./routes/challenge.routes');
+const battleRoutes = require('./routes/battle.routes');
+const submissionRoutes = require('./routes/submission.routes');
 
 const app = express();
 
@@ -30,6 +33,10 @@ app.use(express.json());
 app.use('/api/profiles', profileRoutes);
 app.use('/api/matchmaking', matchmakingRoutes);
 app.use('/api/teams', teamRoutes);
+app.use('/api/challenges', challengeRoutes);
+app.use('/api/battles', battleRoutes);
+app.use('/api/submissions', submissionRoutes);
+
 
 // Health check endpoint (Required for Render and monitoring)
 app.get('/health', (req, res) => {
