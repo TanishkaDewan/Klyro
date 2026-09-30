@@ -1,7 +1,11 @@
 const express = require('express');
 const cors = require('cors');
+const profileRoutes = require('./routes/profile.routes');
+const matchmakingRoutes = require('./routes/matchmaking.routes');
+const teamRoutes = require('./routes/team.routes');
 
 const app = express();
+
 
 // CORS configuration: Allow local Vite frontend during dev and production frontend
 const allowedOrigins = [
@@ -23,6 +27,9 @@ app.use(cors({
 }));
 
 app.use(express.json());
+app.use('/api/profiles', profileRoutes);
+app.use('/api/matchmaking', matchmakingRoutes);
+app.use('/api/teams', teamRoutes);
 
 // Health check endpoint (Required for Render and monitoring)
 app.get('/health', (req, res) => {
