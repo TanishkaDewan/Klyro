@@ -6,6 +6,8 @@ const teamRoutes = require('./routes/team.routes');
 const challengeRoutes = require('./routes/challenge.routes');
 const battleRoutes = require('./routes/battle.routes');
 const submissionRoutes = require('./routes/submission.routes');
+const evaluationRoutes = require('./routes/evaluation.routes');
+const leaderboardRoutes = require('./routes/leaderboard.routes');
 
 const app = express();
 
@@ -36,7 +38,8 @@ app.use('/api/teams', teamRoutes);
 app.use('/api/challenges', challengeRoutes);
 app.use('/api/battles', battleRoutes);
 app.use('/api/submissions', submissionRoutes);
-
+app.use('/api/evaluations', evaluationRoutes);
+app.use('/api/leaderboard', leaderboardRoutes);
 
 // Health check endpoint (Required for Render and monitoring)
 app.get('/health', (req, res) => {
